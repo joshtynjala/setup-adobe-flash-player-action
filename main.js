@@ -23,7 +23,6 @@ async function setupAdobeFlashPlayer() {
     var archiveUrl = `https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/${filename}`;
 
     var downloadedPath = await toolCache.downloadTool(archiveUrl, filename);
-    fs.mkdirSync(installLocation);
 
     if (process.platform.startsWith("darwin")) {
       child_process.execSync("hdiutil attach " + filename);
@@ -31,6 +30,7 @@ async function setupAdobeFlashPlayer() {
       child_process.execSync("echo -e \"#\\!/bin/bash\\n/Applications/Flash\\\\ Player.app/Contents/MacOS/Flash\\\\ Player\\\\ Debugger \\$@\" > /usr/local/bin/flashplayer");
       child_process.execSync("cmod +x /usr/local/bin/flashplayer");
     } else if (process.platform.startsWith("win")) {
+      fs.mkdirSync(installLocation);
       child_process.execSync("copy " + downloadedPath + " " + path.resolve(installLocation, "flashplayer.exe"));
       core.addPath(installLocation);
     }
