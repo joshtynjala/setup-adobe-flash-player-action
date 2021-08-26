@@ -28,7 +28,7 @@ async function setupAdobeFlashPlayer() {
       child_process.execSync("hdiutil attach " + filename);
       child_process.execSync("cp -r /Volumes/Flash\\ Player/* " + installLocation);
       child_process.execSync("echo -e \"#\\!/bin/bash\\n/Applications/Flash\\\\ Player.app/Contents/MacOS/Flash\\\\ Player\\\\ Debugger \\$@\" > /usr/local/bin/flashplayer");
-      child_process.execSync("cmod +x /usr/local/bin/flashplayer");
+      child_process.execSync("chmod +x /usr/local/bin/flashplayer");
     } else if (process.platform.startsWith("win")) {
       fs.mkdirSync(installLocation);
       child_process.execSync("copy " + downloadedPath + " " + path.resolve(installLocation, "flashplayer.exe"));
