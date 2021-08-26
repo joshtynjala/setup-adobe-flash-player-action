@@ -1,0 +1,11 @@
+name: Setup Adobe Flash Player
+author: Josh Tynjala
+description: Action to setup Adobe Flash Player
+
+runs:
+  using: "node12"
+  main: "main.js"
+
+branding:
+  color: "blue"
+  icon: "play"
