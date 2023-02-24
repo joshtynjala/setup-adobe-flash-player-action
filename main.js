@@ -40,8 +40,9 @@ async function setupAdobeFlashPlayer() {
     } else if (process.platform.startsWith("linux")) {
       const extractedLocation = path.resolve(installLocation, "flashplayerdebugger");
       const executableLocation = path.resolve(installLocation, "flashplayer");
-      child_process.execSync(`tar -zxvf ${downloadedPath} flashplayerdebugger -C ${installLocation}`);
+      child_process.execSync(`tar -zxvf ${downloadedPath} -C ${installLocation} flashplayerdebugger`);
       child_process.execSync(`mv ${extractedLocation} ${executableLocation}`);
+      child_process.execSync(`chmod +x ${executableLocation}`);
       core.addPath(installLocation);
     }
   } catch (error) {
