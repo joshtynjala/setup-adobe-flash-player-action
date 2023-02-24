@@ -26,3 +26,12 @@ jobs:
       - name: Check executables
         run: |
           which flashplayer
+
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+      - name: Check executables
+        run: |
+          which flashplayer

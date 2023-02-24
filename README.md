@@ -2,7 +2,7 @@
 
 This action downloads the _Adobe Flash Player projector content debugger_, and adds a **flashplayer** command to the `PATH`.
 
-On macOS, the full path to the executable is:
+On macOS and Linux, the full path to the executable is:
 
 _/usr/local/bin/flashplayer_
 
