@@ -1,6 +1,6 @@
 # Github Action to setup the Adobe Flash Player
 
-This action downloads the [Adobe Flash Player projector content debugger](https://www.adobe.com/support/flashplayer/debug_downloads.html), and adds a _flashplayer_ command to the `PATH`.
+This action downloads the _Adobe Flash Player projector content debugger_, and adds a **flashplayer** command to the `PATH`.
 
 On macOS, the full path to the executable is:
 
