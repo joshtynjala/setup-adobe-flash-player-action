@@ -42,6 +42,7 @@ async function setupAdobeFlashPlayer() {
       const executableLocation = path.resolve(installLocation, "flashplayer");
       child_process.execSync(`tar -zxvf ${downloadedPath} flashplayerdebugger -C ${installLocation}`);
       child_process.execSync(`mv ${extractedLocation} ${executableLocation}`);
+      core.addPath(installLocation);
     }
   } catch (error) {
     core.setFailed(error.message);
