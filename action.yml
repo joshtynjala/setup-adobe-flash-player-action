@@ -3,7 +3,7 @@ author: Josh Tynjala
 description: Action to setup Adobe Flash Player
 
 runs:
-  using: "node16"
+  using: "node20"
   main: "main.js"
 
 branding:
