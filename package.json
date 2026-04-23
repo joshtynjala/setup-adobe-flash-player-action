@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "description": "setup Adobe Flash Player action",
+  "type": "commonjs",
   "main": "main.js",
   "repository": {
     "type": "git",
